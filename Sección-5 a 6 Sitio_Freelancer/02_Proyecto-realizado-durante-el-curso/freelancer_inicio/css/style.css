@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Sofia&family=Tangerine:wght@400;700&display=swap');
+
+:root{
+    --blanco: #fff;
+    --negro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+}
+
+html{
+    font-size: 62.5%; /* Truco para utilizar los rem de manera sensilla */
+}
+
+body{
+    font-family: "Krub", sans-serif;
+    font-size: 16px; /* Truco para utilizar los rem de manera sensilla */
+}
+    /* 
+       El codigo de arriba ase que un 1rem = 10px lo que lo ase mas
+       adaptable para pantallas con alta dencidad de pixeles
+     */
+.titulo{
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+.titulo span{
+    font-size: 2rem;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: auto;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* flex-direction: colum; */ /* coloca los elementos hijos de manera vertical */
+    /* align-items: center;  */  /* Propiedad para alimear los elemtos en columnas */
+    
+}
+
+.navegacion-principal a{
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;  
+    color: var(--blanco);
+}
+
+/* 
+    Tamaños de Media Queris
+    480px   = Celular
+    768px   = Tablet
+    1140px  = Laptop o computadora de escritorio
+    1400px  = En algunos dispocitivos 
+*/
+@media(min-width: 768px){
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.navegacion-principal a :hover{
+    color: var(--negro);
+    background-color: var(--primario);
+}
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
