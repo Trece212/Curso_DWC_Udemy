@@ -55,6 +55,36 @@ h1, h2, h3{
     margin: auto;
 }
 
+.boton{
+    background-color: var(--secundario);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    width: 60%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--blanco);
+}
+
+.boton:hover{
+    background-color: var(--primario);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    width: 60%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--negro);
+}
+
+@media(min-width: 768px){
+    .boton{
+        width: auto;
+    }
+}
+
 .nav-bg{
     background-color: var(--secundario);
 }
