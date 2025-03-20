@@ -6,8 +6,10 @@
     --primario: #FFC107;
     --secundario: #0097A7;
     --gris: #757575;
+    --grisClaro: #DFE9F3;
 }
 
+/* Globales */
 html{
     font-size: 62.5%; /* Truco para utilizar los rem de manera sensilla */
     box-sizing: border-box;
@@ -20,41 +22,18 @@ html{
 body{
     font-family: "Krub", sans-serif;
     font-size: 16px; /* Truco para utilizar los rem de manera sensilla */
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%); 
 }
     /* 
        El codigo de arriba ase que un 1rem = 10px lo que lo ase mas
        adaptable para pantallas con alta dencidad de pixeles
      */
-.titulo{
-    text-align: center;
-    font-size: 3.8rem;
-}
-
-h1{
-    font-size: 3.8rem;
-}
-
-h2{
-    font-size: 2.8rem;
-}
-
-h3{
-    font-size: 1.8rem;
-}
-
-h1, h2, h3{
-    text-align: center;
-}
-
-.titulo span{
-    font-size: 2rem;
-}
 
 .contenedor{
     max-width: 120rem;
-    margin: auto;
+    margin: 0 auto;
 }
-
+    
 .boton{
     background-color: var(--secundario);
     padding: 1rem 2rem;
@@ -78,12 +57,36 @@ h1, h2, h3{
     text-decoration: none;
     color: var(--negro);
 }
-
+    
 @media(min-width: 768px){
     .boton{
         width: auto;
     }
 }
+
+/* Tipografia */
+
+h1{
+    font-size: 3.8rem;
+}
+
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+.titulo span{
+    font-size: 2rem;
+}
+
+/* Navegación principal */
 
 .nav-bg{
     background-color: var(--secundario);
@@ -124,6 +127,7 @@ h1, h2, h3{
     }
 }
 
+/* Hero */
 .hero{
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
@@ -148,4 +152,9 @@ h1, h2, h3{
 .contenido-hero h2, 
 .contenido-hero p{
     color: var(--blanco);
+}
+
+.contenido-hero .ubicacion{
+    display: flex;
+    align-items: flex-end;
 }
